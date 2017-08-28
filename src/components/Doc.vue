@@ -67,15 +67,29 @@
 			      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
 			    </div>
 			  </div>
-			  <input type="checkbox">
-			  <input type="radio" name="radio">
-			  <input type="radio" name="radio">
+			  <input type="checkbox" style="margin-left: 20px;">
+			  <div class="input-group">
+			  	<label for="">type1</label>
+			  	<input type="radio" name="radio" checked>
+			  </div>
+			  <div class="input-group">
+			  	<label for="">type2</label>
+			  	<input type="radio" name="radio">
+			  </div>
 			  <div class="form-group">
 			    <div class="col-sm-offset-2 col-sm-10">
 			      <button type="submit" class="btn btn-info">提交</button>
 			    </div>
 			  </div>
 			</form>
+		</div>
+		<div class="table-group">
+			<div class="table-header">
+				我是标题
+			</div>
+			<div class="table-body" style="height: 300px">
+				
+			</div>
 		</div>
 	</div>
 </template>

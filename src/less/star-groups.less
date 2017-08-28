@@ -1,0 +1,52 @@
+// 全局申明 星星的颜色和尾巴的颜色
+@color-star: rgb(2,124,210);
+// 流星
+.star-point(@top;@left;@color) {
+	transition: all 10s linear;
+	transform: rotate(180deg);
+	display: block;  
+    width: 4px;  
+    height: 4px;
+    background: rgb(2,124,210);
+    border-radius: 50%;
+    top: @top;
+    left: @left;
+    position: absolute;
+    box-shadow: 0 0 5px 0px rgba(2,124,210, 0.2); 
+}
+.star-line(@width; @color) {
+	content: '';  
+    display: block;  
+    top: 1px;  
+    left: 3px;
+    border: 0px solid #fff; 
+    border-width: 1px @width;
+    position: relative;
+	border-color: transparent transparent transparent rgba(2,124,210, 0.2);  
+}
+.make-stars-point() {
+	.col(@index) {
+		@item: ~".star-@{index}"; // 初始化 申明list
+		.col((@index + 1), @item);// index + 1并调用自身函数此时所传第二个参数就是classname
+	}
+	.col(@index, @list) when (@index =< 2) {
+		@item: ~".star-@{index}";
+        .col((@index + 1), ~"@{list}, @{item}");
+	}
+    .col(@index, @list) when (@index > 2) { // 大于时 做列表渲染
+        @{list} {
+            float: left;
+        }
+    }
+    .col(1);
+}
+.make-stars-common(@index) when (@index > 0){
+    .star-@{index} {
+        .star-point(@index * 100px, @index * 150px, @color-star);
+        &:before{
+            .star-line(@index * 120px, @color-star)
+        }
+    }
+    .make-stars-common((@index - 1));
+}
+.make-stars-common(2);

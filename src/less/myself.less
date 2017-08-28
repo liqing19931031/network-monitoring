@@ -1,3 +1,15 @@
+.no-padding{
+  padding: 0;
+}
+.no-padding-right{
+  padding-right: 0;
+}
+.no-padding-left{
+  padding-left: 0;
+}
+.line-height-input{
+  line-height: 34px;
+}
 .text-gray-darker{
 	color:  @gray-darker;
 }
@@ -43,79 +55,63 @@
 .brand-danger{
 	background-color: @brand-danger;
 }
-input[type="radio"]{
-  width: 16px;
-  height: 16px;
+.text-big{
+  font-size: 16px;
 }
-input[type="radio"]:before{
-  content: '\e6df';
+.text-small{
+  font-size: 12px;
+}
+.table-hover-danger{
+  margin-bottom: 0;
+  tbody{
+    tr:hover{
+      background-color: rgb(253,245,230);
+    }
+  }
+}
+.table-hover-primary{
+  margin-bottom: 0;
+  tbody{
+    tr:hover{
+      background-color: rgb(229,244,255)
+    }
+  }
+}
+.btn-primary-opposite{
+  .button-variant(@brand-primary;@btn-default-bg;@btn-primary-border)
+}
+.btn-primary-opposite{
+  &.active{
+    background-color: #1795ff;
+    color: white;
+  }
+}
+.errorMessage{
+  border-radius: 9px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 18px;
+  font-size: 12px;
+  line-height: 18px;
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 17px;
-  text-indent: -1px;
-  border-radius: 50%;
-  border: 1px solid silver;
-  vertical-align: middle;
-  line-height: .87;
-  font-family: 'Glyphicons Halflings';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: white;
   color: white;
-  transition: all 0.15s;
 }
-input[type="radio"]:hover:before{
-  content: '\e6df';
-  color: #007be3;
+.btn{
+  &.disabled{
+    cursor: no-drop;
+  }
 }
-input[type="radio"]:checked:before{
-  content: '\e6df';
-  color: #007be3;
-}
-input[type="radio"]{
+.loadding{
   position: relative;
-  clip: rect(0, 0, 0, 0);
-}
-
-input[type="checkbox"]{
-  width: 16px;
-  height: 16px;
-}
-input[type="checkbox"]:before{
-  content: '\e60b';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  text-indent: 1px;
-  border-radius: 4px;
-  vertical-align: middle;
-  font-family: 'Glyphicons Halflings';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: silver;
-  line-height: 1.4;
-  transition: all 0.15s;
-  color: silver;
-}
-input[type="checkbox"]:hover:before{
-  content: '\e60b';
-  color: white;
-}
-input[type="checkbox"]:checked:before{
-  content: '\e60b';
-  color: white;
-  background: #43cb83;
-}
-input[type="checkbox"]{
-  position: relative;
-  clip: rect(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  img{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+  }
 }

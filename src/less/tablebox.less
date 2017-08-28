@@ -1,0 +1,160 @@
+.table-group{
+	border: 1px solid #ddd;
+	background-color: #fff;
+	margin-bottom: 20px;
+	a{
+		cursor: pointer;
+	}
+	.disabled{
+		a{
+			cursor: no-drop;
+			color: @gray-light;
+		}
+	}
+	.input-inline-block{
+		display: inline-block;
+	}
+	.table-header{
+		height: 65px;
+		padding: 0 60px;
+		line-height: 65px;
+		font-size: 16px;
+		+ table{
+			border-top: inherit;
+		}
+		+ div{
+			border-top: inherit;
+		}
+		.table-header--warn{
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+	.table-title{
+		padding: 20px 60px;
+		label{
+			font-weight: normal;
+		}
+		+ div{
+			border-top: inherit;
+		}
+		+ table{
+			border-top: inherit;
+		}
+	}
+	.table-body{
+		padding: 20px 60px;
+	}
+	.table-footer{
+		padding: 20px 60px;
+	}
+	/*特殊radio定制*/
+	.switch-group{
+		label {
+	        display: inline-block;
+	        position: relative;
+	        height: 18px;
+	        width: 40px;
+	        border-radius: 9px;
+	    }
+	    label .circle {
+	    	position: absolute;
+	    	top: 1px;
+	        display: inline-block;
+	        height: 16px;
+	        width: 16px;
+	        border-radius: 50%;
+	        background-color: white;
+	    }
+	    label .text {
+	        text-indent: 30px;
+	        line-height: 28px;
+	        font-size: 18px;
+	        font-family: sans-serif;
+	    }
+	 	.on{
+	        color:#333;
+	    }
+	    .off{
+	        color:#eee;
+	    }
+	    .circle {
+	        position: absolute;
+	        display: inline-block;
+	    }
+	    .radio{
+	    	margin: 0;
+	    }
+		.radio-type{
+			display: none;
+		}
+	    .radio-type ~label {
+	        background-color: rgb(204,204,204);
+	    }
+	    .radio-type ~label .circle {
+	        left: 1px;
+	        transition: all 0.3s;
+	        --webkit-transition: all 0.3s;
+	    }
+	    .radio-type ~label .on {
+	        display: none;
+	    }
+
+	    .radio-type ~ label .off {
+	        display: inline-block;
+	    }
+	    .radio-type:checked ~ label {
+	        background: rgb(72,145,253);
+	    }
+	    .radio-type:checked ~label .circle {
+	        left: 23px;
+	    }
+	    .radio-type:checked ~label .on {
+	        display: inline-block;
+	    }
+	    .radio-type:checked ~ label .off {
+	        display: none;
+	    }
+	}
+}
+// 多选组件
+.tab-group{
+	ul{
+		padding: 0;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+		li{
+			line-height: 28px;
+			list-style: none;
+			float: left;
+			padding:0 10px;
+			border:1px solid #0089fc;
+			border-left: none;
+			color: #1795ff;
+			cursor: pointer;
+			&.active{
+				background-color: #1795ff;
+				color: white;
+			}
+			&.active:hover{
+				background-color: #1795ff;
+			}
+		}
+		li:nth-child(1) {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border-left: 1px solid #0089fc;
+		}
+		li:nth-last-child(1) {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		li:hover{
+			background-color: #eee;
+		}
+		li:active{
+			box-shadow:2px 2px 4px rgba(0, 0, 0, 0.1) inset;
+		}
+	}
+}

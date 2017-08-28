@@ -1,0 +1,105 @@
+// input check radio 重绘
+input[type="radio"]{
+  width: 20px;
+  height: 20px;
+  &.danger{
+    color: @brand-danger;
+    &:before{
+      border-color: @brand-danger;
+    }
+  }
+  &.primary{
+    color: @brand-info;
+    &:before{
+      border-color: @brand-info;
+    }
+  }
+}
+input[type="radio"]:before{
+  content: '\e6df';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 17px;
+  text-indent: -2px;
+  border-radius: 50%;
+  border: 4px solid silver;
+  vertical-align: middle;
+  line-height: .87;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: white;
+  color: white;
+  transition: all 0.15s;
+}
+input[type="radio"]:hover:before{
+  content: '\e6df';
+  color: inherit;
+}
+input[type="radio"]:checked:before{
+  content: '\e6df';
+  color: inherit;
+}
+input[type="radio"]{
+  position: relative;
+  clip: rect(0, 0, 0, 0);
+}
+
+input[type="checkbox"]{
+  width: 16px;
+  height: 16px;
+}
+input[type="checkbox"]:before{
+  content: '\e60b';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  text-indent: 1px;
+  border-radius: 4px;
+  vertical-align: middle;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: silver;
+  line-height: 1.4;
+  transition: all 0.15s;
+  color: silver;
+}
+input[type="checkbox"]:hover:before{
+  content: '\e60b';
+  color: white;
+}
+input[type="checkbox"]:checked:before{
+  content: '\e60b';
+  color: white;
+  background: #43cb83;
+}
+input[type="checkbox"]{
+  position: relative;
+  clip: rect(0, 0, 0, 0);
+}
+.input-group{
+	float: left;
+	label{
+		font-weight: normal;
+		margin: 0;
+	}
+	input[type=radio]{
+		margin-left: 10px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 0;
+	}
+}
+.input-group + .input-group{
+	margin-left: 30px;
+}

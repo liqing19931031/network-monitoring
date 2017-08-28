@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    index: path.resolve(__dirname, 'E:/project/Web-union/mon-web/monitorApi/public/web/dist/index.html'),
+    assetsRoot: path.resolve(__dirname, 'E:/project/Web-union/mon-web/monitorApi/public/web/dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,
